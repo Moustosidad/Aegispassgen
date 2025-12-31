@@ -116,7 +116,7 @@ aegispassgen
 
 CLI Example:
 
-aegispassgen --words David Gayan Futbol --numbers 2009 --max 100000 --output wordlist.txt
+aegispassgen --words potato  --numbers 897q --max 100000 --output wordlist.txt
 
 Mask-Based Generation:
 
