@@ -1,4 +1,4 @@
-(![image](https://raw.githubusercontent.com/Moustosidad/Aegispassgen/main/aegispassgen.png)
+![image](https://raw.githubusercontent.com/Moustosidad/Aegispassgen/main/aegispassgen.png)
 
 # 🛡️ AegisPassGen
 
