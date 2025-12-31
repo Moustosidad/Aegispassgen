@@ -8,7 +8,7 @@ The project focuses on realistic, human-like password generation, combining rule
 
 ------------------------------------------------------------
 
-KEY FEATURES
+## KEY FEATURES
 
 - Advanced wordlist generation from custom user inputs
 - Hashcat-style mask-based generation
@@ -24,7 +24,7 @@ KEY FEATURES
 
 ------------------------------------------------------------
 
-PROJECT PHILOSOPHY
+### PROJECT PHILOSOPHY
 
 Unlike password cracking tools, AegisPassGen DOES NOT perform attacks.
 
@@ -43,7 +43,7 @@ This strict separation between generation and attack ensures:
 
 ------------------------------------------------------------
 
-HOW AEGISPASSGEN WORKS
+### HOW AEGISPASSGEN WORKS
 
 1. Input Tokens  
 User-provided words, names, years, keywords, or arbitrary strings.
@@ -68,7 +68,7 @@ Candidates are generated on-the-fly, avoiding large memory usage.
 
 ------------------------------------------------------------
 
-EXAMPLE USE CASES
+### EXAMPLE USE CASES
 
 - Internal password audits
 - Red team / blue team simulations
@@ -79,7 +79,7 @@ EXAMPLE USE CASES
 
 ------------------------------------------------------------
 
-INSTALLATION (OFFICIAL METHOD)
+## INSTALLATION (OFFICIAL METHOD)
 
 The official installation method is via Git clone.
 
@@ -88,29 +88,29 @@ https://github.com/Moustosidad/Aegispassgen.git
 
 Installation steps:
 
-git clone https://github.com/Moustosidad/Aegispassgen.git
-cd Aegispassgen
-python3 -m pip install .
+* `git clone https://github.com/Moustosidad/Aegispassgen.git`
+* `cd Aegispassgen`
+* `python3 -m pip install .`
 
 ------------------------------------------------------------
 
-USAGE
+## USAGE
 
 Interactive mode:
 
-aegispassgen
+`aegispassgen`
 
 CLI example:
 
-aegispassgen --words David Gayan Futbol --numbers 2009 --max 100000 --output wordlist.txt
+`aegispassgen --words Potato Security --numbers 7967 --max 100000 --output wordlist.txt`
 
 Mask-based generation:
 
-aegispassgen --mask ?l?l?d?d
+`aegispassgen --mask ?l?l?d?d`
 
 ------------------------------------------------------------
 
-MASK SYNTAX
+### MASK SYNTAX
 
 ?l  lowercase letters (a–z)  
 ?u  uppercase letters (A–Z)  
@@ -122,25 +122,8 @@ Example:
 
 ------------------------------------------------------------
 
-PROJECT STRUCTURE
 
-aegispassgen/
-├── aegispassgen/
-│   ├── banner.py
-│   ├── cli.py
-│   ├── engine.py
-│   ├── rules.py
-│   ├── masks.py
-│   ├── progress.py
-│   └── colors.py
-├── README.md
-├── LICENSE
-├── setup.cfg
-└── pyproject.toml
-
-------------------------------------------------------------
-
-LEGAL DISCLAIMER
+#### LEGAL DISCLAIMER
 
 This software is intended exclusively for authorized security testing, educational purposes, and research.
 
@@ -149,14 +132,14 @@ Using this tool against systems without explicit authorization may be illegal an
 
 ------------------------------------------------------------
 
-LICENSE
+### LICENSE
 
 MIT License.
 See the LICENSE file for full license text.
 
 ------------------------------------------------------------
 
-FINAL NOTES
+#### FINAL NOTES
 
 AegisPassGen is designed to be:
 
@@ -167,3 +150,4 @@ AegisPassGen is designed to be:
 - responsible
 
 Contributions, reviews, and security-focused discussions are welcome.
+Support me:https://www.paypal.me/Moustosidad 
