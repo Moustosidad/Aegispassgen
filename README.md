@@ -1,3 +1,5 @@
+(![image](https://raw.githubusercontent.com/Moustosidad/Aegispassgen/main/aegispassgen.png)
+
 # 🛡️ AegisPassGen
 
 Advanced password wordlist generation engine for authorized security auditing
