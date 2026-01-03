@@ -1,8 +1,14 @@
 [project]
 name = "aegispassgen"
-version = "2.0.0"
-description = "Advanced password generation engine for security auditing"
+version = "0.2.0"
+description = "Advanced terminal-based password generation framework"
+authors = [{name = "Your Name"}]
 requires-python = ">=3.9"
+
+dependencies = [
+    "rich",
+    "textual"
+]
 
 [project.scripts]
 aegispassgen = "aegispassgen.cli:main"
