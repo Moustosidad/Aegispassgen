@@ -1,14 +1,16 @@
 import sys
 from aegispassgen.config import Config
 from aegispassgen.core.engine import AegisEngine
-from aegispassgen.ui.menu import MainMenu
 
 
 def main():
+    # Sin argumentos → menú
     if len(sys.argv) == 1:
+        from aegispassgen.ui.menu import MainMenu
         MainMenu().run()
         return
 
+    # Con argumentos → ejecución directa
     config = Config.from_args()
     engine = AegisEngine(config)
 
