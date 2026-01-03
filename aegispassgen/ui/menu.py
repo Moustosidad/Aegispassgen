@@ -14,14 +14,14 @@ BANNER = r"""
 ██║  ██║███████╗╚██████╔╝██║███████║
 ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝╚══════╝
 
- ADVANCED PASSWORD GENERATION FRAMEWORK
- RED TEAM • AUDIT • RESEARCH
+ ADVANCED PASSWORD GENERATION ENGINE
+ RED TEAM • AUDIT • SECURITY RESEARCH
 """
 
 
 OPTIONS = [
     "Start interactive generation",
-    "Quick demo (5k)",
+    "Quick demo (5 000 passwords)",
     "About",
     "Exit",
 ]
@@ -71,16 +71,18 @@ class MainMenu(App):
 
         if choice.startswith("Start"):
             self.exit()
-            self.launch_interactive()
+            self.start_interactive()
 
         elif choice.startswith("Quick"):
             self.exit()
-            self.launch_demo()
+            self.quick_demo()
 
         elif choice == "About":
             self.query_one("#menu").update(
                 Text(
-                    "\nAEGISPASSGEN\n\nTerminal-based password generation framework\nFocused on human patterns and efficiency\n",
+                    "\nAEGISPASSGEN\n\n"
+                    "Terminal-based password generation framework\n"
+                    "Focused on human patterns and efficiency\n",
                     justify="center",
                     style="green",
                 )
@@ -90,13 +92,13 @@ class MainMenu(App):
             self.exit()
             sys.exit(0)
 
-    def launch_interactive(self):
+    def start_interactive(self):
         from aegispassgen.config import Config
         from aegispassgen.core.engine import AegisEngine
         from aegispassgen.ui.tui import AegisTUI
 
         config = Config(
-            words=["example", "password"],
+            words=["example", "user"],
             numbers=["2024"],
             max_results=100_000,
             seed=None,
@@ -105,13 +107,13 @@ class MainMenu(App):
         engine = AegisEngine(config)
         AegisTUI(engine).run()
 
-    def launch_demo(self):
+    def quick_demo(self):
         from aegispassgen.config import Config
         from aegispassgen.core.engine import AegisEngine
         from aegispassgen.ui.tui import AegisTUI
 
         config = Config(
-            words=["demo", "test"],
+            words=["demo"],
             numbers=["123"],
             max_results=5000,
             seed=42,
